@@ -1,4 +1,8 @@
-const noble = require('noble');
+const noble = require('@abandonware/noble');
+
+const PERIPHERAL_ID = '';
+const SERVICE_ID = '';
+const CHARACTERISTIC_ID = '';
 
 let peripheral;
 let service;
