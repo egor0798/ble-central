@@ -7,7 +7,7 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "@abandonware/noble": "^1.9.1"
+    "@abandonware/noble": "^1.9.2-14"
   },
   "author": "",
   "license": "ISC"
