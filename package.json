@@ -1,0 +1,14 @@
+{
+  "name": "ble-central",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "noble": "^1.9.1"
+  },
+  "author": "",
+  "license": "ISC"
+}
