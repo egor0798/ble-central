@@ -1,4 +1,5 @@
 const noble = require('@abandonware/noble');
+import { Buffer } from 'buffer';
 
 const PERIPHERAL_ID = '';
 const SERVICE_ID = '';
@@ -71,10 +72,12 @@ noble.on('discover', function(res) {
 })
 
 function doSomething() {
-    characteristic.write('ping', false, function(err) {
+    const message = Buffer.from('Ping', 'utf-8');
+    characteristic.write(message, false, function(err) {
         if (!err) {
             characteristic.on('read', function(data, isNotification) {
-                console.log(`Got ${isNotification ? 'notification ' : 'message '}: `, data);
+                console.log(`Got ${isNotification ? 'notification ' : 'message '}:`);
+                console.log(data.toString());
             });
         }
         else {
